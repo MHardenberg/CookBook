@@ -1,50 +1,34 @@
-\documentclass[10pt]{book}
-\usepackage[margin=18mm]{geometry}
+\documentclass[10pt]{article}
 \usepackage{setup}
 
 \title{\sc the Struggeling Chef's Cook Book}
 \author{Michel}
 \date{\today}
 
+\includeonly{
+  recipes/makeBelieveMash,
+  recipes/euroInsta,
+  recipes/shroomPan,
+  recipes/friedRice,
+  recipes/potatoPan,
+  sections/tips,
+}
+
 \begin{document}
 \maketitle
 
 \tableofcontents
 
-\section{To Do}{
+\section*{To Do}{
   \begin{itemize}
-    \item Genral tips and debatable trueisms
-      \begin{itemize}
-        \item Boiling over frying
-        \item Unpack carrot and potatos so that they dry instead of spoiling
-        \item Prefer basic seasoning - simple lets the vegetables
-          define the taste
-        \item Add salt early - herbs and pepper late or after adding
-          water to preserve flavour
-        \item never fry garlic if you want garlic taste.
-        \item Salads are a waste of money - they don't fill you, go bad easy and
-          your body is bad at breaking down uncooked vegtables anyways.
-        \item Don't buy milk unless you specifically need it. Oats
-          are fine without. We're living in a recession.
-        \item slight variations can make you think you eat different meals.
-        \item Prefer course oats and wholegrain flour as they are more filling.
-        \item Olive oil is for the upper class.
-        \item Always boil extra rice, potato or pasta for later use.
-      \end{itemize}
-
     \item Dumpster diving
-    \item Poor man's mushroom pan
     \item Saurkraut
     \item the everthing soup (incl. variations)
-    \item Makebelieve Mashed Potato
-    \item European Instant noodles (Reasonably fast noodles)
     \item Potato Salad
     \item Mayonaise
     \item Jam Juice
     \item Leftover's vegtable stock
     \item Backed Onion
-    \item Euro Fried Rice
-    \item Simple potato pan
     \item Holiday oats
     \item The fridge raid (fried everything with potato or pasta)
     \item Poor knights
@@ -53,5 +37,26 @@
   \end{itemize}
 
 }
+
+\clearpage
+\part{\sc Recipes}
+\begingroup
+\let\clearpage\relax
+\let\newpage\relax
+\begin{multicols}{2}
+
+  \includeRecipe{recipes/makeBelieveMash}
+  \includeRecipe{recipes/euroInsta}
+  \includeRecipe{recipes/shroomPan}
+  \includeRecipe{recipes/friedRice}
+  \includeRecipe{recipes/potatoPan}
+
+\end{multicols}
+\endgroup
+
+\clearpage
+\pagenumbering{roman}
+\part{\sc Wisdom and Opinion Pieces}
+\include{sections/tips}
 
 \end{document}

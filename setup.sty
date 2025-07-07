@@ -7,5 +7,22 @@
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage[margin=18mm]{geometry}
+\usepackage{setspace}
 \setlength\parindent{0pt}
 \setlength{\columnsep}{0.5cm}
+
+\newcommand{\secline}{
+
+  \hrulefill\\
+
+}
+
+\newcommand{\includeRecipe}[1]{
+  \begin{minipage}{\linewidth}
+    \onehalfspacing
+    \include{#1}
+
+    \vspace{.5in}
+  \end{minipage}
+}
