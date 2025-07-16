@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[12pt]{article}
 \usepackage{setup}
 
 \title{\sc the Struggeling Chef's Cook Book}
@@ -11,6 +11,9 @@
   recipes/shroomPan,
   recipes/friedRice,
   recipes/potatoPan,
+  recipes/roastedOnion,
+recipes/scotchBarley,
+  recipes/stock,
   sections/tips,
 }
 
@@ -30,7 +33,6 @@
     \item Mayonaise
     \item Jam Juice
     \item Leftover's vegtable stock
-    \item Backed Onion
     \item Holiday oats
     \item The fridge raid (fried everything with potato or pasta)
     \item Poor knights
@@ -41,24 +43,22 @@
 }
 
 \clearpage
-\part{\sc Recipes}
-\begingroup
-\let\clearpage\relax
-\let\newpage\relax
-\begin{multicols}{2}
+\part{\sc Recipes}\clearpage
+%\begin{multicols}{2}
 
-  \includeRecipe{recipes/makeBelieveMash}
-  \includeRecipe{recipes/euroInsta}
-  \includeRecipe{recipes/shroomPan}
-  \includeRecipe{recipes/friedRice}
-  \includeRecipe{recipes/potatoPan}
+\includeRecipe{recipes/makeBelieveMash}
+\includeRecipe{recipes/euroInsta}
+\includeRecipe{recipes/shroomPan}
+\includeRecipe{recipes/friedRice}
+\includeRecipe{recipes/potatoPan}
+\includeRecipe{recipes/roastedOnion}
+\includeRecipe{recipes/scotchBarley}
+\includeRecipe{recipes/stock}
+%\end{multicols}
 
-\end{multicols}
-\endgroup
-
-\clearpage
 \pagenumbering{roman}
 \part{\sc Wisdom and Opinion Pieces}
+\clearpage
 \include{sections/tips}
 
 \end{document}

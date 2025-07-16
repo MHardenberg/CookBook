@@ -12,12 +12,17 @@
 \setlength\parindent{0pt}
 \setlength{\columnsep}{0.5cm}
 
+\setcounter{tocdepth}{2}
 \newcommand{\secline}{
 
   \hrulefill\\
 
 }
 
+\newcommand{\recipe}[1]{
+\pagenumbering{roman}
+    \section{#1}
+}
 \newcommand{\includeRecipe}[1]{
   \begin{minipage}{\linewidth}
     \onehalfspacing
