@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{report}
 \usepackage{setup}
 
 \title{\sc the Struggeling Chef's Cook Book}
@@ -11,21 +11,21 @@
   recipes/shroomPan,
   recipes/friedRice,
   recipes/potatoPan,
+  recipes/fastKaesekuchen,
   recipes/roastedOnion,
   recipes/scotchBarley,
   recipes/soup,
+  recipes/kraut,
   sections/tips,
 }
 
 \begin{document}
 \maketitle
-
 \tableofcontents
 
-\section*{To Do}{
+\section{To Do}{
   \begin{itemize}
     \item Dumpster diving
-    \item Saurkraut
     \item Barley soup
     \item Oellebroed
     \item the everthing soup (incl. variations)
@@ -43,24 +43,25 @@
 }
 
 \clearpage
-\part{\sc Recipes}\clearpage
+\chapter{\sc Recipes}
+\clearpage
 %\begin{multicols}{2}
-
 \includeRecipe{recipes/makeBelieveMash}
 \includeRecipe{recipes/euroInsta}
+\includeRecipe{recipes/fastKaesekuchen}
 \includeRecipe{recipes/shroomPan}
 \includeRecipe{recipes/friedRice}
 \includeRecipe{recipes/potatoPan}
 \includeRecipe{recipes/roastedOnion}
 \includeRecipe{recipes/scotchBarley}
+\includeRecipe{recipes/kraut}
 \includeRecipe{recipes/stock}
 \includeRecipe{recipes/soup}
 %\end{multicols}
 
 \clearpage
-\pagenumbering{roman}
-\part{\sc Wisdom and Opinion Pieces}
+
+\chapter{\sc Wisdom and Opinion Pieces}
 \clearpage
 \include{sections/tips}
-
 \end{document}
