@@ -2,7 +2,7 @@
 \usepackage{ifthen} % Required for ifthenelse statements
 \usepackage{multicol}
 \usepackage{graphicx}
-\usepackage[chars=65, lines=45]{stdpage}
+\usepackage[chars=75, lines=45]{stdpage}
 \usepackage{lipsum}
 \usepackage{setspace}
 
@@ -11,23 +11,18 @@
 
 % recipe env
 \newenvironment{recipe}[1]{
-  \section{\sc #1}
+  \section*{\sc #1}
+  \addcontentsline{toc}{section}{#1}
   \begin{multicols}{2}
   }{
-  \end{multicols}
-\vspace{.5in}}
+\end{multicols}\hrule}
 
 % ingredient env
 \newenvironment{ingr}[1][]{
-  \ifthenelse{\equal{#1}{}}{}{\emph{Serves {#1}.}
-  \begin{minipage}{\olumnwidth}}
-
-\begin{itemize}}{
-  \end{itemize}\hrule
-\end{minipage}
+  \ifthenelse{\equal{#1}{}}{}{\emph{Serves {#1}.}\vspace{1em}\\
+  \begin{minipage}{\columnwidth}}
+  \begin{itemize}}{
+    \end{itemize}
+  \end{minipage}
+  \columnbreak
 \newcolumn}
-
-\newcommand{\rIngr}[1][]{
-\begin{ingr}[#1]}
-  \newcommand{\rBody}[1][]{
-\end{ingr}}
