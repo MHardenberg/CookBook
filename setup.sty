@@ -1,10 +1,12 @@
 \usepackage[UKenglish]{babel}
 \usepackage{ifthen} % Required for ifthenelse statements
 
-\usepackage{multicol}
 \usepackage{graphicx}
-\usepackage[margin=18mm]{geometry}
+\usepackage[chars=65, lines=45]{stdpage}
+\usepackage{lipsum}
+
 \usepackage{setspace}
+
 \setlength\parindent{0pt}
 \setlength{\columnsep}{0.5cm}
 \renewcommand\thesection{}
@@ -26,7 +28,12 @@
 }
 
 \newcommand{\recipe}[1]{
+<<<<<<< Updated upstream
     \section{#1}
+=======
+  \pagenumbering{roman}
+  \section{#1}
+>>>>>>> Stashed changes
 }
 \newcommand{\includeRecipe}[1]{
   \begin{minipage}{\linewidth}
