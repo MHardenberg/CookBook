@@ -1,5 +1,6 @@
 \documentclass[12pt]{report}
 \usepackage{setup}
+\pagenumbering{arabic}
 
 \title{\sc the Struggeling Chef's Cook Book}
 \author{Michel}
@@ -13,9 +14,11 @@
   recipes/potatoPan,
   recipes/fastKaesekuchen,
   recipes/roastedOnion,
+  recipes/filledBread,
   recipes/scotchBarley,
   recipes/soup,
   recipes/kraut,
+  recipes/stock,
   sections/tips,
 }
 
@@ -44,8 +47,7 @@
 
 \clearpage
 \chapter{\sc Recipes}
-\clearpage
-%\begin{multicols}{2}
+\begin{multicols}{2}
 \includeRecipe{recipes/makeBelieveMash}
 \includeRecipe{recipes/euroInsta}
 \includeRecipe{recipes/fastKaesekuchen}
@@ -54,14 +56,14 @@
 \includeRecipe{recipes/potatoPan}
 \includeRecipe{recipes/roastedOnion}
 \includeRecipe{recipes/scotchBarley}
+\includeRecipe{recipes/filledBread}
 \includeRecipe{recipes/kraut}
 \includeRecipe{recipes/stock}
 \includeRecipe{recipes/soup}
-%\end{multicols}
+\end{multicols}
 
 \clearpage
 
 \chapter{\sc Wisdom and Opinion Pieces}
-\clearpage
 \include{sections/tips}
 \end{document}

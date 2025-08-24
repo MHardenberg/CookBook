@@ -7,6 +7,17 @@
 \usepackage{setspace}
 \setlength\parindent{0pt}
 \setlength{\columnsep}{0.5cm}
+\renewcommand\thesection{}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\makeatletter
+\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
+\let\sectionignore\@gobbletwo
+\let\latex@numberline\numberline
+\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
+\makeatother
+
+
+
 
 \newcommand{\secline}{
 
@@ -15,7 +26,6 @@
 }
 
 \newcommand{\recipe}[1]{
-\pagenumbering{roman}
     \section{#1}
 }
 \newcommand{\includeRecipe}[1]{
