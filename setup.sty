@@ -10,6 +10,7 @@
 \setlength{\columnsep}{0.5cm}
 
 % recipe env
+% -----------------------------------------------------------------------------
 \newenvironment{recipe}[1]{
   \section*{\sc #1}
   \addcontentsline{toc}{section}{#1}
@@ -18,6 +19,7 @@
 \end{multicols}\hrule}
 
 % ingredient env
+% -----------------------------------------------------------------------------
 \newenvironment{ingr}[1][]{
   \ifthenelse{\equal{#1}{}}{}{\emph{Serves {#1}.}\vspace{1em}\\
   \begin{minipage}{\columnwidth}}
