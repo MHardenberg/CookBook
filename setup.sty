@@ -1,45 +1,33 @@
 \usepackage[UKenglish]{babel}
 \usepackage{ifthen} % Required for ifthenelse statements
-
+\usepackage{multicol}
 \usepackage{graphicx}
 \usepackage[chars=65, lines=45]{stdpage}
 \usepackage{lipsum}
-
 \usepackage{setspace}
 
 \setlength\parindent{0pt}
 \setlength{\columnsep}{0.5cm}
-\renewcommand\thesection{}
-\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-\makeatletter
-\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
-\let\sectionignore\@gobbletwo
-\let\latex@numberline\numberline
-\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
-\makeatother
 
+% recipe env
+\newenvironment{recipe}[1]{
+  \section{\sc #1}
+  \begin{multicols}{2}
+  }{
+  \end{multicols}
+\vspace{.5in}}
 
+% ingredient env
+\newenvironment{ingr}[1][]{
+  \ifthenelse{\equal{#1}{}}{}{\emph{Serves {#1}.}
+  \begin{minipage}{\olumnwidth}}
 
+\begin{itemize}}{
+  \end{itemize}\hrule
+\end{minipage}
+\newcolumn}
 
-\newcommand{\secline}{
-
-  \hrulefill\\
-
-}
-
-\newcommand{\recipe}[1]{
-<<<<<<< Updated upstream
-    \section{#1}
-=======
-  \pagenumbering{roman}
-  \section{#1}
->>>>>>> Stashed changes
-}
-\newcommand{\includeRecipe}[1]{
-  \begin{minipage}{\linewidth}
-    \onehalfspacing
-    \include{#1}
-
-    \vspace{.5in}
-  \end{minipage}
-}
+\newcommand{\rIngr}[1][]{
+\begin{ingr}[#1]}
+  \newcommand{\rBody}[1][]{
+\end{ingr}}
