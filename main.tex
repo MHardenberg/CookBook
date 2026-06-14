@@ -1,64 +1,54 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{book}
 \usepackage{setup}
+
 \pagenumbering{arabic}
 
 \title{\sc the Struggeling Chef's Cook Book}
 \author{Michel}
 \date{\today}
 
-\includeonly{
-  recipes/makeBelieveMash,
-  recipes/euroInsta,
-  recipes/shroomPan,
-  recipes/friedRice,
-  recipes/potatoPan,
-  recipes/fastKaesekuchen,
-  recipes/roastedOnion,
-  recipes/filledBread,
-  recipes/scotchBarley,
-  recipes/soup,
-  recipes/kraut,
-  recipes/stock,
-  sections/tips,
-}
-
 \begin{document}
 \maketitle
 \tableofcontents
 
 \section{To Do}{
-  \begin{itemize}
-    \item Dumpster diving
-    \item Barley soup
-    \item Oellebroed
-    \item the everthing soup (incl. variations)
-    \item Potato Salad
-    \item Mayonaise
-    \item Jam Juice
-    \item Leftover's vegtable stock
-    \item Holiday oats
-    \item The fridge raid (fried everything with potato or pasta)
-    \item Poor knights
-    \item Pancakes the correct way
-    \item Buy barley, buck-wheat and the like in bulk from bakery suppliers.
-  \end{itemize}
+    \begin{itemize}
+        \item Dumpster diving
+        \item Barley soup
+        \item Oellebroed
+        \item the everthing soup (incl. variations)
+        \item Potato Salad
+        \item Mayonaise
+        \item Jam Juice
+        \item Leftover's vegtable stock
+        \item Holiday oats
+        \item The fridge raid (fried everything with potato or pasta)
+        \item Poor knights
+        \item Pancakes the correct way
+        \item Buy barley, buck-wheat and the like in bulk from bakery suppliers.
+    \end{itemize}
 
 }
 
 \clearpage
-\chapter{\sc Recipes}
-  \input{recipes/makeBelieveMash}
-  \input{recipes/euroInsta}
-  %\input{recipes/fastKaesekuchen}
-  %\input{recipes/shroomPan}
-  %\input{recipes/friedRice}
-  %\input{recipes/potatoPan}
-  %\input{recipes/roastedOnion}
-  %\input{recipes/scotchBarley}
-  %\input{recipes/filledBread}
-  %\input{recipes/kraut}
-  %\input{recipes/stock}
-  %\input{recipes/soup}
+\chapter{Recipes for Doomsday}
+\section{Breakfast}
+\input{recipes/overnightoats}
+\input{recipes/makeBelieveMash}
+\input{recipes/euroInsta}
+
+\chapter{Recipes for the Recession}
+\input{recipes/shroomPan}
+\input{recipes/friedRice}
+\input{recipes/potatoPan}
+\input{recipes/soup}
+
+\chapter{Recipes for some other time}
+\input{recipes/kraut}
+%\input{recipes/stock}
+
+\chapter{Recipes for the Impatient}
+\input{recipes/fastKaesekuchen}
 
 \clearpage
 

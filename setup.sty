@@ -5,26 +5,36 @@
 \usepackage[chars=75, lines=45]{stdpage}
 \usepackage{lipsum}
 \usepackage{setspace}
+\usepackage{needspace}
 
 \setlength\parindent{0pt}
 \setlength{\columnsep}{0.5cm}
 
 % recipe env
 % -----------------------------------------------------------------------------
-\newenvironment{recipe}[1]{
-  \section*{\sc #1}
-  \addcontentsline{toc}{section}{#1}
-  \begin{multicols}{2}
-  }{
-\end{multicols}\hrule}
+
+\newenvironment{recipe}[1]{%
+    \begin{minipage}{\textwidth}
+        \needspace{6\baselineskip}%
+        \addcontentsline{toc}{section}{#1}%
+        \small
+        \section*{\textsc{#1}}%
+        \begin{multicols}{2}%
+        }{%
+        \end{multicols}%
+        \nopagebreak%
+        \vspace{1em}\hrule%
+    \end{minipage}
+}
 
 % ingredient env
 % -----------------------------------------------------------------------------
-\newenvironment{ingr}[1][]{
-  \ifthenelse{\equal{#1}{}}{}{\emph{Serves {#1}.}\vspace{1em}\\
-  \begin{minipage}{\columnwidth}}
-  \begin{itemize}}{
-    \end{itemize}
-  \end{minipage}
-  \columnbreak
-\newcolumn}
+\newenvironment{ingr}[1][]{%
+    \ifthenelse{\equal{#1}{}}{}{%
+        \emph{Serves {#1}.}\vspace{1em}\\
+    }%
+    \begin{itemize}%
+        }{%
+    \end{itemize}%
+    \columnbreak%
+}
